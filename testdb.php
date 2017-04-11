@@ -13,7 +13,7 @@ if ($dbConnected) {
   if ($dbSelected) {
     echo "Database Connection successful<br>";
   } else {
-    echo "Database connection failed<br>";
+    echo "Database connection failure<br>";
   }
 } else {
   echo "MySQL connection FAILED<br>";

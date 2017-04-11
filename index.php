@@ -7,7 +7,7 @@
   <title>Index</title>
 </head>
 <body>
-  <h1>This is the development branch</h1>
+  <h1>This is the develop branch</h1>
 
 </body>
 </html>

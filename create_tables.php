@@ -29,9 +29,9 @@ if ($dbConnected) {
 }
 
 if ($dbSuccess) {
-  // SQL script to create table tCompany
+  // SQL script to create table Company
 
-$createCoyTable_SQL = "CREATE OR REPLACE TABLE tCompany
+$createCoyTable_SQL = "CREATE OR REPLACE TABLE Company
 ( ID             INT(11)      NOT NULL AUTO_INCREMENT PRIMARY KEY
 , preName        VARCHAR(50)
 , Name           VARCHAR(250) NOT NULL
@@ -45,10 +45,10 @@ $createCoyTable_SQL = "CREATE OR REPLACE TABLE tCompany
 , COUNTRY        VARCHAR(250) NOT NULL)";
 
 if (mysql_query($createCoyTable_SQL)) {
-  echo "Create TABLE tCompany - Successful<br>";
+  echo "Create TABLE Company - Successful<br>";
 }
 
-$createPersonTable_SQL = "CREATE OR REPLACE TABLE tPerson
+$createPersonTable_SQL = "CREATE OR REPLACE TABLE Person
 ( ID             INT(11)       NOT NULL AUTO_INCREMENT PRIMARY KEY
 , Salutation     VARCHAR(20)
 , FirstName      VARCHAR(50)
@@ -57,7 +57,7 @@ $createPersonTable_SQL = "CREATE OR REPLACE TABLE tPerson
 
 
 if (mysql_query($createPersonTable_SQL)) {
-  echo "Create TABLE tPerson - Successful";
+  echo "Create TABLE Person - Successful";
 }
 
 }

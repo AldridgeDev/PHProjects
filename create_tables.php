@@ -1,21 +1,6 @@
 <?php
-$hostname = "localhost";
-$username = "root";
-$password = "";
 
-$databaseName = "phpclass";
-$dbConnected  = mysql_connect($hostname, $username, $password);
-$dbSelected   = mysql_select_db($databaseName, $dbConnected);
-if ($dbConnected) {
-  echo "You have sucessfully connected to the $databaseName database<br>";
-  if ($dbSelected) {
-    echo "Database Connection successful<br>";
-  } else {
-    echo "Database connection failure<br>";
-  }
-} else {
-  echo "MySQL connection FAILED<br>";
-}
+include_once('testdb.php');
 
 $dbSuccess = true;
 if ($dbConnected) {
@@ -33,7 +18,7 @@ if ($dbSuccess) {
 
 $createCoyTable_SQL = "CREATE OR REPLACE TABLE Company
 ( ID             INT(11)      NOT NULL AUTO_INCREMENT PRIMARY KEY
-, preName        VARCHAR(50)
+, preName        VARCHAR(50)  NULL
 , Name           VARCHAR(250) NOT NULL
 , RegType        VARCHAR(50)  NULL
 , StreetA        VARCHAR(150) NULL
@@ -49,7 +34,7 @@ if (mysql_query($createCoyTable_SQL)) {
 }
 
 $createPersonTable_SQL = "CREATE OR REPLACE TABLE Person
-( ID             INT(11)       NOT NULL AUTO_INCREMENT PRIMARY KEY
+( ID             INT(11)     NOT NULL AUTO_INCREMENT PRIMARY KEY
 , Salutation     VARCHAR(20)
 , FirstName      VARCHAR(50)
 , LastName       VARCHAR(50) NOT NULL

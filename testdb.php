@@ -4,7 +4,7 @@ $hostname = "localhost";
 $username = "root";
 $password = "";
 
-$databaseName = "test";
+$databaseName = "phpclass";
 $dbConnected  = mysql_connect($hostname, $username, $password);
 $dbSelected   = mysql_select_db($databaseName, $dbConnected);
 
